@@ -1,0 +1,22 @@
+==============================================================================
+Test Cases                                                                    
+==============================================================================
+Test Cases.Apa Core Login                                                     
+==============================================================================
+Test Cases.Apa Core Login.Valid Login :: A test suite with a single test fo...
+==============================================================================
+Valid Login                                                           | PASS |
+------------------------------------------------------------------------------
+Test Cases.Apa Core Login.Valid Login :: A test suite with a singl... | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Test Cases.Apa Core Login                                             | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Test Cases                                                            | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\huanri\Documents\APA_automation\src\pabot_results\Test Cases.Apa Core Login.Valid Login\output.xml

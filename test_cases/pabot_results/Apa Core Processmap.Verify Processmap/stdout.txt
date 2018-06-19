@@ -1,0 +1,17 @@
+==============================================================================
+Apa Core Processmap                                                           
+==============================================================================
+Apa Core Processmap.Verify Processmap :: apa_automation_testing_for_regression
+==============================================================================
+Login                                                                 | FAIL |
+Evaluating expression 'len(["xpath://div[@class='setup-bottom col-xs-12 col-md-4 col-lg-3 ']"])=0' failed: SyntaxError: invalid syntax (<string>, line 1)
+------------------------------------------------------------------------------
+Apa Core Processmap.Verify Processmap :: apa_automation_testing_fo... | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Apa Core Processmap                                                   | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\huanri\Documents\APA_automation\src\test_cases\pabot_results\Apa Core Processmap.Verify Processmap\output.xml

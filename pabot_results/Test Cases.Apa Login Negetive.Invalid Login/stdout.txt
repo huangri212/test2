@@ -1,0 +1,38 @@
+==============================================================================
+Test Cases                                                                    
+==============================================================================
+Test Cases.Apa Login Negetive                                                 
+==============================================================================
+Test Cases.Apa Login Negetive.Invalid Login :: A test suite containing test...
+==============================================================================
+Invalid Username                                                      | FAIL |
+Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.
+------------------------------------------------------------------------------
+Invalid Password                                                      | FAIL |
+Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.
+------------------------------------------------------------------------------
+Invalid Username And Password                                         | FAIL |
+Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.
+------------------------------------------------------------------------------
+Empty Username                                                        | FAIL |
+Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.
+------------------------------------------------------------------------------
+Empty Password                                                        | FAIL |
+Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.
+------------------------------------------------------------------------------
+Empty Username And Password                                           | FAIL |
+Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.
+------------------------------------------------------------------------------
+Test Cases.Apa Login Negetive.Invalid Login :: A test suite contai... | FAIL |
+6 critical tests, 0 passed, 6 failed
+6 tests total, 0 passed, 6 failed
+==============================================================================
+Test Cases.Apa Login Negetive                                         | FAIL |
+6 critical tests, 0 passed, 6 failed
+6 tests total, 0 passed, 6 failed
+==============================================================================
+Test Cases                                                            | FAIL |
+6 critical tests, 0 passed, 6 failed
+6 tests total, 0 passed, 6 failed
+==============================================================================
+Output:  C:\Users\huanri\Documents\APA_automation\src\pabot_results\Test Cases.Apa Login Negetive.Invalid Login\output.xml

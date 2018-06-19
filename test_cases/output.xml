@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 3.0.4 (Python 3.6.5 on win32)" generated="20180617 21:53:39.742">
+<suite id="s1" name="Apa Core Processmap" source="C:\Users\huanri\Documents\APA_automation\src\test_cases\apa_core_processmap">
+<suite id="s1-s1" name="Invalid Login" source="C:\Users\huanri\Documents\APA_automation\src\test_cases\apa_core_processmap\invalid_login.robot">
+<kw name="Open Browser To Login Page" library="resource" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:02.307" level="INFO">Opening browser 'Chrome' to base url 'http://qa.dxc-apa.net/passport/login'.</msg>
+<status status="PASS" starttime="20180617 21:53:02.307" endtime="20180617 21:53:20.131"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180617 21:53:20.131" endtime="20180617 21:53:21.340"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20180617 21:53:21.341" endtime="20180617 21:53:21.342"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Agile Process Automation</arg>
+</arguments>
+<msg timestamp="20180617 21:53:21.363" level="INFO">Page title is 'Agile Process Automation'.</msg>
+<status status="PASS" starttime="20180617 21:53:21.344" endtime="20180617 21:53:21.363"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:21.343" endtime="20180617 21:53:21.364"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:02.307" endtime="20180617 21:53:21.364"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20180617 21:53:35.969" endtime="20180617 21:53:39.175"></status>
+</kw>
+<test id="s1-s1-t1" name="Invalid Username">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:21.370" level="INFO">Opening url 'http://qa.dxc-apa.net/passport/login'</msg>
+<status status="PASS" starttime="20180617 21:53:21.369" endtime="20180617 21:53:22.260"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Agile Process Automation</arg>
+</arguments>
+<msg timestamp="20180617 21:53:22.293" level="INFO">Page title is 'Agile Process Automation'.</msg>
+<status status="PASS" starttime="20180617 21:53:22.262" endtime="20180617 21:53:22.294"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:22.261" endtime="20180617 21:53:22.294"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:21.368" endtime="20180617 21:53:22.294"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>invalid</arg>
+<arg>${VALID PASSWORD}</arg>
+</arguments>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginEmail</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:22.298" level="INFO">Typing text 'invalid' into text field 'id:loginEmail'.</msg>
+<status status="PASS" starttime="20180617 21:53:22.297" endtime="20180617 21:53:22.615"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:22.296" endtime="20180617 21:53:22.615"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:22.618" level="INFO">Typing text 'password' into text field 'id:loginPassword'.</msg>
+<status status="PASS" starttime="20180617 21:53:22.617" endtime="20180617 21:53:22.915"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:22.616" endtime="20180617 21:53:22.915"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginButton</arg>
+</arguments>
+<msg timestamp="20180617 21:53:22.917" level="INFO">Clicking button 'id:loginButton'.</msg>
+<status status="PASS" starttime="20180617 21:53:22.917" endtime="20180617 21:53:23.073"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20180617 21:53:23.074" endtime="20180617 21:53:23.076"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:22.916" endtime="20180617 21:53:23.076"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${ERROR URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180617 21:53:23.900" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Apa Core Processmap.Invalid Login-selenium-screenshot-1.png"&gt;&lt;img src="Apa Core Processmap.Invalid Login-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180617 21:53:23.088" endtime="20180617 21:53:23.900"></status>
+</kw>
+<msg timestamp="20180617 21:53:23.916" level="FAIL">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</msg>
+<status status="FAIL" starttime="20180617 21:53:23.077" endtime="20180617 21:53:23.916"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:23.077" endtime="20180617 21:53:23.916"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:22.295" endtime="20180617 21:53:23.916"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:21.365" endtime="20180617 21:53:23.916" critical="yes">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</status>
+</test>
+<test id="s1-s1-t2" name="Invalid Password">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:23.916" level="INFO">Opening url 'http://qa.dxc-apa.net/passport/login'</msg>
+<status status="PASS" starttime="20180617 21:53:23.916" endtime="20180617 21:53:24.732"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Agile Process Automation</arg>
+</arguments>
+<msg timestamp="20180617 21:53:24.758" level="INFO">Page title is 'Agile Process Automation'.</msg>
+<status status="PASS" starttime="20180617 21:53:24.734" endtime="20180617 21:53:24.758"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:24.732" endtime="20180617 21:53:24.759"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:23.916" endtime="20180617 21:53:24.759"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${VALID USER}</arg>
+<arg>invalid</arg>
+</arguments>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginEmail</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:24.763" level="INFO">Typing text 'admin1@dxc.com' into text field 'id:loginEmail'.</msg>
+<status status="PASS" starttime="20180617 21:53:24.762" endtime="20180617 21:53:25.109"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:24.760" endtime="20180617 21:53:25.109"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:25.111" level="INFO">Typing text 'invalid' into text field 'id:loginPassword'.</msg>
+<status status="PASS" starttime="20180617 21:53:25.110" endtime="20180617 21:53:25.353"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:25.110" endtime="20180617 21:53:25.354"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginButton</arg>
+</arguments>
+<msg timestamp="20180617 21:53:25.356" level="INFO">Clicking button 'id:loginButton'.</msg>
+<status status="PASS" starttime="20180617 21:53:25.355" endtime="20180617 21:53:25.518"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20180617 21:53:25.518" endtime="20180617 21:53:25.522"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:25.354" endtime="20180617 21:53:25.523"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${ERROR URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180617 21:53:26.466" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Apa Core Processmap.Invalid Login-selenium-screenshot-2.png"&gt;&lt;img src="Apa Core Processmap.Invalid Login-selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180617 21:53:25.533" endtime="20180617 21:53:26.466"></status>
+</kw>
+<msg timestamp="20180617 21:53:26.466" level="FAIL">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</msg>
+<status status="FAIL" starttime="20180617 21:53:25.524" endtime="20180617 21:53:26.466"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:25.523" endtime="20180617 21:53:26.466"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:24.759" endtime="20180617 21:53:26.466"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:23.916" endtime="20180617 21:53:26.466" critical="yes">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</status>
+</test>
+<test id="s1-s1-t3" name="Invalid Username And Password">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:26.481" level="INFO">Opening url 'http://qa.dxc-apa.net/passport/login'</msg>
+<status status="PASS" starttime="20180617 21:53:26.481" endtime="20180617 21:53:27.263"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Agile Process Automation</arg>
+</arguments>
+<msg timestamp="20180617 21:53:27.290" level="INFO">Page title is 'Agile Process Automation'.</msg>
+<status status="PASS" starttime="20180617 21:53:27.264" endtime="20180617 21:53:27.291"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:27.264" endtime="20180617 21:53:27.291"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:26.481" endtime="20180617 21:53:27.292"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>invalid</arg>
+<arg>whatever</arg>
+</arguments>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginEmail</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:27.295" level="INFO">Typing text 'invalid' into text field 'id:loginEmail'.</msg>
+<status status="PASS" starttime="20180617 21:53:27.294" endtime="20180617 21:53:27.536"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:27.293" endtime="20180617 21:53:27.537"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:27.539" level="INFO">Typing text 'whatever' into text field 'id:loginPassword'.</msg>
+<status status="PASS" starttime="20180617 21:53:27.538" endtime="20180617 21:53:27.816"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:27.537" endtime="20180617 21:53:27.816"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginButton</arg>
+</arguments>
+<msg timestamp="20180617 21:53:27.818" level="INFO">Clicking button 'id:loginButton'.</msg>
+<status status="PASS" starttime="20180617 21:53:27.817" endtime="20180617 21:53:27.956"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20180617 21:53:27.957" endtime="20180617 21:53:27.959"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:27.816" endtime="20180617 21:53:27.960"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${ERROR URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180617 21:53:28.799" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Apa Core Processmap.Invalid Login-selenium-screenshot-3.png"&gt;&lt;img src="Apa Core Processmap.Invalid Login-selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180617 21:53:27.970" endtime="20180617 21:53:28.799"></status>
+</kw>
+<msg timestamp="20180617 21:53:28.799" level="FAIL">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</msg>
+<status status="FAIL" starttime="20180617 21:53:27.961" endtime="20180617 21:53:28.799"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:27.960" endtime="20180617 21:53:28.799"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:27.292" endtime="20180617 21:53:28.799"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:26.481" endtime="20180617 21:53:28.799" critical="yes">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</status>
+</test>
+<test id="s1-s1-t4" name="Empty Username">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:28.799" level="INFO">Opening url 'http://qa.dxc-apa.net/passport/login'</msg>
+<status status="PASS" starttime="20180617 21:53:28.799" endtime="20180617 21:53:29.579"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Agile Process Automation</arg>
+</arguments>
+<msg timestamp="20180617 21:53:29.612" level="INFO">Page title is 'Agile Process Automation'.</msg>
+<status status="PASS" starttime="20180617 21:53:29.581" endtime="20180617 21:53:29.612"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:29.580" endtime="20180617 21:53:29.612"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:28.799" endtime="20180617 21:53:29.612"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>${VALID PASSWORD}</arg>
+</arguments>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginEmail</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:29.616" level="INFO">Typing text '' into text field 'id:loginEmail'.</msg>
+<status status="PASS" starttime="20180617 21:53:29.616" endtime="20180617 21:53:29.777"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:29.615" endtime="20180617 21:53:29.777"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:29.779" level="INFO">Typing text 'password' into text field 'id:loginPassword'.</msg>
+<status status="PASS" starttime="20180617 21:53:29.779" endtime="20180617 21:53:30.011"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:29.778" endtime="20180617 21:53:30.012"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginButton</arg>
+</arguments>
+<msg timestamp="20180617 21:53:30.013" level="INFO">Clicking button 'id:loginButton'.</msg>
+<status status="PASS" starttime="20180617 21:53:30.012" endtime="20180617 21:53:30.173"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20180617 21:53:30.174" endtime="20180617 21:53:30.176"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:30.012" endtime="20180617 21:53:30.177"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${ERROR URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180617 21:53:30.983" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Apa Core Processmap.Invalid Login-selenium-screenshot-4.png"&gt;&lt;img src="Apa Core Processmap.Invalid Login-selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180617 21:53:30.186" endtime="20180617 21:53:30.983"></status>
+</kw>
+<msg timestamp="20180617 21:53:30.999" level="FAIL">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</msg>
+<status status="FAIL" starttime="20180617 21:53:30.177" endtime="20180617 21:53:30.999"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:30.177" endtime="20180617 21:53:30.999"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:29.613" endtime="20180617 21:53:30.999"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:28.799" endtime="20180617 21:53:30.999" critical="yes">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</status>
+</test>
+<test id="s1-s1-t5" name="Empty Password">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:30.999" level="INFO">Opening url 'http://qa.dxc-apa.net/passport/login'</msg>
+<status status="PASS" starttime="20180617 21:53:30.999" endtime="20180617 21:53:31.813"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Agile Process Automation</arg>
+</arguments>
+<msg timestamp="20180617 21:53:31.834" level="INFO">Page title is 'Agile Process Automation'.</msg>
+<status status="PASS" starttime="20180617 21:53:31.814" endtime="20180617 21:53:31.834"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:31.813" endtime="20180617 21:53:31.835"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:30.999" endtime="20180617 21:53:31.835"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${VALID USER}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginEmail</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:31.838" level="INFO">Typing text 'admin1@dxc.com' into text field 'id:loginEmail'.</msg>
+<status status="PASS" starttime="20180617 21:53:31.838" endtime="20180617 21:53:32.204"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:31.837" endtime="20180617 21:53:32.204"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:32.207" level="INFO">Typing text '' into text field 'id:loginPassword'.</msg>
+<status status="PASS" starttime="20180617 21:53:32.205" endtime="20180617 21:53:32.395"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:32.205" endtime="20180617 21:53:32.395"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginButton</arg>
+</arguments>
+<msg timestamp="20180617 21:53:32.396" level="INFO">Clicking button 'id:loginButton'.</msg>
+<status status="PASS" starttime="20180617 21:53:32.396" endtime="20180617 21:53:32.547"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20180617 21:53:32.548" endtime="20180617 21:53:32.551"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:32.395" endtime="20180617 21:53:32.551"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${ERROR URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180617 21:53:33.550" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Apa Core Processmap.Invalid Login-selenium-screenshot-5.png"&gt;&lt;img src="Apa Core Processmap.Invalid Login-selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180617 21:53:32.564" endtime="20180617 21:53:33.550"></status>
+</kw>
+<msg timestamp="20180617 21:53:33.550" level="FAIL">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</msg>
+<status status="FAIL" starttime="20180617 21:53:32.553" endtime="20180617 21:53:33.550"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:32.551" endtime="20180617 21:53:33.550"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:31.836" endtime="20180617 21:53:33.550"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:30.999" endtime="20180617 21:53:33.550" critical="yes">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</status>
+</test>
+<test id="s1-s1-t6" name="Empty Username And Password">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:33.550" level="INFO">Opening url 'http://qa.dxc-apa.net/passport/login'</msg>
+<status status="PASS" starttime="20180617 21:53:33.550" endtime="20180617 21:53:34.442"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Agile Process Automation</arg>
+</arguments>
+<msg timestamp="20180617 21:53:34.456" level="INFO">Page title is 'Agile Process Automation'.</msg>
+<status status="PASS" starttime="20180617 21:53:34.443" endtime="20180617 21:53:34.456"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:34.442" endtime="20180617 21:53:34.457"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:33.550" endtime="20180617 21:53:34.457"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginEmail</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:34.462" level="INFO">Typing text '' into text field 'id:loginEmail'.</msg>
+<status status="PASS" starttime="20180617 21:53:34.461" endtime="20180617 21:53:34.637"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:34.459" endtime="20180617 21:53:34.637"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:34.640" level="INFO">Typing text '' into text field 'id:loginPassword'.</msg>
+<status status="PASS" starttime="20180617 21:53:34.639" endtime="20180617 21:53:34.802"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:34.638" endtime="20180617 21:53:34.803"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginButton</arg>
+</arguments>
+<msg timestamp="20180617 21:53:34.804" level="INFO">Clicking button 'id:loginButton'.</msg>
+<status status="PASS" starttime="20180617 21:53:34.804" endtime="20180617 21:53:34.999"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20180617 21:53:34.999" endtime="20180617 21:53:35.001"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:34.803" endtime="20180617 21:53:35.002"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${ERROR URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180617 21:53:35.969" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Apa Core Processmap.Invalid Login-selenium-screenshot-6.png"&gt;&lt;img src="Apa Core Processmap.Invalid Login-selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180617 21:53:35.012" endtime="20180617 21:53:35.969"></status>
+</kw>
+<msg timestamp="20180617 21:53:35.969" level="FAIL">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</msg>
+<status status="FAIL" starttime="20180617 21:53:35.003" endtime="20180617 21:53:35.969"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:35.002" endtime="20180617 21:53:35.969"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:34.458" endtime="20180617 21:53:35.969"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:33.550" endtime="20180617 21:53:35.969" critical="yes">Location should have been 'http://qa.dxc-apa.net/error.html' but was 'https://qa.dxc-apa.net/passport/login'.</status>
+</test>
+<doc>A test suite containing tests related to invalid login.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="FAIL" starttime="20180617 21:53:01.694" endtime="20180617 21:53:39.175"></status>
+</suite>
+<suite id="s1-s2" name="Verify Processmap" source="C:\Users\huanri\Documents\APA_automation\src\test_cases\apa_core_processmap\verify_processmap.robot">
+<test id="s1-s2-t1" name="Login">
+<kw name="Login" library="resource">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:02.307" level="INFO">Opening browser 'Chrome' to base url 'http://qa.dxc-apa.net/passport/login'.</msg>
+<status status="PASS" starttime="20180617 21:53:02.307" endtime="20180617 21:53:14.745"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180617 21:53:14.745" endtime="20180617 21:53:15.935"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20180617 21:53:15.935" endtime="20180617 21:53:15.937"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Agile Process Automation</arg>
+</arguments>
+<msg timestamp="20180617 21:53:15.966" level="INFO">Page title is 'Agile Process Automation'.</msg>
+<status status="PASS" starttime="20180617 21:53:15.939" endtime="20180617 21:53:15.966"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:15.937" endtime="20180617 21:53:15.967"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:02.307" endtime="20180617 21:53:15.967"></status>
+</kw>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${VALID USER}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginEmail</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:15.970" level="INFO">Typing text 'admin1@dxc.com' into text field 'id:loginEmail'.</msg>
+<status status="PASS" starttime="20180617 21:53:15.969" endtime="20180617 21:53:16.414"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:15.967" endtime="20180617 21:53:16.415"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${VALID PASSWORD}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180617 21:53:16.418" level="INFO">Typing text 'password' into text field 'id:loginPassword'.</msg>
+<status status="PASS" starttime="20180617 21:53:16.416" endtime="20180617 21:53:16.721"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:16.415" endtime="20180617 21:53:16.721"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginButton</arg>
+</arguments>
+<msg timestamp="20180617 21:53:16.723" level="INFO">Clicking button 'id:loginButton'.</msg>
+<status status="PASS" starttime="20180617 21:53:16.723" endtime="20180617 21:53:16.915"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20180617 21:53:16.916" endtime="20180617 21:53:16.918"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:16.722" endtime="20180617 21:53:16.919"></status>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>tag:small</arg>
+<arg>Good day,</arg>
+</arguments>
+<msg timestamp="20180617 21:53:16.920" level="INFO">Verifying element 'tag:small' contains exact text 'Good day,'.</msg>
+<status status="PASS" starttime="20180617 21:53:16.920" endtime="20180617 21:53:17.816"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:16.919" endtime="20180617 21:53:17.817"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:53:02.307" endtime="20180617 21:53:17.817"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:(//p[@class="arrow arrow"])[2]</arg>
+</arguments>
+<msg timestamp="20180617 21:53:17.818" level="INFO">Clicking element 'xpath:(//p[@class="arrow arrow"])[2]'.</msg>
+<status status="PASS" starttime="20180617 21:53:17.818" endtime="20180617 21:53:18.009"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>xpath://div[@class='setup-bottom col-xs-12 col-md-4 col-lg-3 ']</arg>
+</arguments>
+<assign>
+<var>${customers}</var>
+</assign>
+<msg timestamp="20180617 21:53:18.010" level="INFO">${customers} = ["xpath://div[@class='setup-bottom col-xs-12 col-md-4 col-lg-3 ']"]</msg>
+<status status="PASS" starttime="20180617 21:53:18.010" endtime="20180617 21:53:18.010"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>len(${customers})=0</arg>
+</arguments>
+<msg timestamp="20180617 21:53:18.011" level="FAIL">Evaluating expression 'len(["xpath://div[@class='setup-bottom col-xs-12 col-md-4 col-lg-3 ']"])=0' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</msg>
+<status status="FAIL" starttime="20180617 21:53:18.010" endtime="20180617 21:53:18.012"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:53:02.307" endtime="20180617 21:53:18.012" critical="yes">Evaluating expression 'len(["xpath://div[@class='setup-bottom col-xs-12 col-md-4 col-lg-3 ']"])=0' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</status>
+</test>
+<doc>apa_automation_testing_for_regression
+</doc>
+<status status="FAIL" starttime="20180617 21:53:01.694" endtime="20180617 21:53:18.014"></status>
+</suite>
+<status status="FAIL" starttime="20180617 21:53:01.616" endtime="20180617 21:53:39.191"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="7">Critical Tests</stat>
+<stat pass="0" fail="7">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="7" id="s1" name="Apa Core Processmap">Apa Core Processmap</stat>
+<stat pass="0" fail="6" id="s1-s1" name="Invalid Login">Apa Core Processmap.Invalid Login</stat>
+<stat pass="0" fail="1" id="s1-s2" name="Verify Processmap">Apa Core Processmap.Verify Processmap</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

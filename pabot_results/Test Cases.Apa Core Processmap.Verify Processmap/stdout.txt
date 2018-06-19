@@ -1,0 +1,22 @@
+==============================================================================
+Test Cases                                                                    
+==============================================================================
+Test Cases.Apa Core Processmap                                                
+==============================================================================
+Test Cases.Apa Core Processmap.Verify Processmap :: apa_automation_testing_...
+==============================================================================
+Login                                                                 | PASS |
+------------------------------------------------------------------------------
+Test Cases.Apa Core Processmap.Verify Processmap :: apa_automation... | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Test Cases.Apa Core Processmap                                        | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Test Cases                                                            | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\huanri\Documents\APA_automation\src\pabot_results\Test Cases.Apa Core Processmap.Verify Processmap\output.xml

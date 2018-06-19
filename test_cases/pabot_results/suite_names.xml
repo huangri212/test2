@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20180617 21:52:59.222">
+<suite id="s1" name="Apa Core Processmap" source="C:\Users\huanri\Documents\APA_automation\src\test_cases\apa_core_processmap">
+<suite id="s1-s1" name="Invalid Login" source="C:\Users\huanri\Documents\APA_automation\src\test_cases\apa_core_processmap\invalid_login.robot">
+<kw name="Open Browser To Login Page" library="resource" type="setup">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.836" endtime="20180617 21:52:59.836"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.836" endtime="20180617 21:52:59.836"></status>
+</kw>
+<test id="s1-s1-t1" name="Invalid Username">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.836" endtime="20180617 21:52:59.851"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>invalid</arg>
+<arg>${VALID PASSWORD}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.836" endtime="20180617 21:52:59.851" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Invalid Password">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${VALID USER}</arg>
+<arg>invalid</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Invalid Username And Password">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>invalid</arg>
+<arg>whatever</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Empty Username">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>${VALID PASSWORD}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="Empty Password">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.851"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${VALID USER}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.867" endtime="20180617 21:52:59.867"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.867"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.851" endtime="20180617 21:52:59.867" critical="yes"></status>
+</test>
+<test id="s1-s1-t6" name="Empty Username And Password">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.867" endtime="20180617 21:52:59.867"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.867" endtime="20180617 21:52:59.867"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.867" endtime="20180617 21:52:59.867"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.867" endtime="20180617 21:52:59.867"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>No Operation</arg>
+</arguments>
+<msg timestamp="20180617 21:52:59.867" level="FAIL">Keyword 'Login With Invalid Credentials Should Fail' expected 2 arguments, got 1.</msg>
+<status status="FAIL" starttime="20180617 21:52:59.867" endtime="20180617 21:52:59.867"></status>
+</kw>
+<status status="FAIL" starttime="20180617 21:52:59.867" endtime="20180617 21:52:59.867" critical="yes">Keyword 'Login With Invalid Credentials Should Fail' expected 2 arguments, got 1.</status>
+</test>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.867" endtime="20180617 21:52:59.867"></status>
+</kw>
+<doc>A test suite containing tests related to invalid login.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="FAIL" starttime="20180617 21:52:59.285" endtime="20180617 21:52:59.867"></status>
+</suite>
+<suite id="s1-s2" name="Verify Processmap" source="C:\Users\huanri\Documents\APA_automation\src\test_cases\apa_core_processmap\verify_processmap.robot">
+<test id="s1-s2-t1">
+<status status="FAIL" starttime="20180617 21:52:59.883" endtime="20180617 21:52:59.883" critical="yes">Test case name cannot be empty.</status>
+</test>
+<test id="s1-s2-t2" name="Login">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20180617 21:52:59.883" endtime="20180617 21:52:59.883"></status>
+</kw>
+<status status="PASS" starttime="20180617 21:52:59.883" endtime="20180617 21:52:59.883" critical="yes"></status>
+</test>
+<doc>apa_automation_testing_for_regression
+</doc>
+<status status="FAIL" starttime="20180617 21:52:59.867" endtime="20180617 21:52:59.883"></status>
+</suite>
+<status status="FAIL" starttime="20180617 21:52:59.222" endtime="20180617 21:52:59.883"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="2">Critical Tests</stat>
+<stat pass="6" fail="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="2" id="s1" name="Apa Core Processmap">Apa Core Processmap</stat>
+<stat pass="5" fail="1" id="s1-s1" name="Invalid Login">Apa Core Processmap.Invalid Login</stat>
+<stat pass="1" fail="1" id="s1-s2" name="Verify Processmap">Apa Core Processmap.Verify Processmap</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180617 21:52:58.816" level="ERROR">Error in file 'C:\Users\huanri\Documents\APA_automation\src\test_cases\apa_core_processmap\invalid_login.robot': Non-existing setting ''.</msg>
+<msg timestamp="20180617 21:52:59.285" level="ERROR">Error in file 'C:\Users\huanri\Documents\APA_automation\src\test_cases\resource.robot': Non-existing setting ''.</msg>
+</errors>
+</robot>

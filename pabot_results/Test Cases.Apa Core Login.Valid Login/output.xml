@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20180619 13:03:59.489">
+<suite id="s1" name="Test Cases" source="C:\Users\huanri\Documents\APA_automation\src\test_cases">
+<suite id="s1-s1" name="Apa Core Login" source="C:\Users\huanri\Documents\APA_automation\src\test_cases\apa_core_login">
+<suite id="s1-s1-s1" name="Valid Login" source="C:\Users\huanri\Documents\APA_automation\src\test_cases\apa_core_login\valid_login.robot">
+<test id="s1-s1-s1-t1" name="Valid Login">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180619 13:04:00.970" level="INFO">Opening browser 'Chrome' to base url 'http://qa.dxc-apa.net/passport/login'.</msg>
+<status status="PASS" starttime="20180619 13:04:00.969" endtime="20180619 13:04:27.213"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180619 13:04:27.214" endtime="20180619 13:04:28.551"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20180619 13:04:28.551" endtime="20180619 13:04:28.552"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Agile Process Automation</arg>
+</arguments>
+<msg timestamp="20180619 13:04:28.809" level="INFO">Page title is 'Agile Process Automation'.</msg>
+<status status="PASS" starttime="20180619 13:04:28.553" endtime="20180619 13:04:28.810"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:28.553" endtime="20180619 13:04:28.810"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:00.967" endtime="20180619 13:04:28.811"></status>
+</kw>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${VALID USER}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginEmail</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180619 13:04:28.814" level="INFO">Typing text 'admin1@dxc.com' into text field 'id:loginEmail'.</msg>
+<status status="PASS" starttime="20180619 13:04:28.813" endtime="20180619 13:04:30.022"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:28.811" endtime="20180619 13:04:30.022"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${VALID PASSWORD}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180619 13:04:30.024" level="INFO">Typing text 'password' into text field 'id:loginPassword'.</msg>
+<status status="PASS" starttime="20180619 13:04:30.023" endtime="20180619 13:04:30.426"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:30.022" endtime="20180619 13:04:30.426"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginButton</arg>
+</arguments>
+<msg timestamp="20180619 13:04:30.428" level="INFO">Clicking button 'id:loginButton'.</msg>
+<status status="PASS" starttime="20180619 13:04:30.427" endtime="20180619 13:04:31.223"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20180619 13:04:31.223" endtime="20180619 13:04:31.232"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:30.426" endtime="20180619 13:04:31.232"></status>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>tag:small</arg>
+<arg>Good day,</arg>
+</arguments>
+<msg timestamp="20180619 13:04:31.234" level="INFO">Verifying element 'tag:small' contains exact text 'Good day,'.</msg>
+<status status="PASS" starttime="20180619 13:04:31.234" endtime="20180619 13:04:32.248"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:31.233" endtime="20180619 13:04:32.249"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20180619 13:04:32.250" endtime="20180619 13:04:38.013"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:00.965" endtime="20180619 13:04:38.013" critical="yes"></status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" starttime="20180619 13:03:59.655" endtime="20180619 13:04:38.015"></status>
+</suite>
+<status status="PASS" starttime="20180619 13:03:59.646" endtime="20180619 13:04:38.023"></status>
+</suite>
+<status status="PASS" starttime="20180619 13:03:59.499" endtime="20180619 13:04:38.026"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Test Cases">Test Cases</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Apa Core Login">Test Cases.Apa Core Login</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="Valid Login">Test Cases.Apa Core Login.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

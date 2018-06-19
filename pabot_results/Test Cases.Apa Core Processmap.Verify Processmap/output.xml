@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20180619 13:03:59.487">
+<suite id="s1" name="Test Cases" source="C:\Users\huanri\Documents\APA_automation\src\test_cases">
+<suite id="s1-s1" name="Apa Core Processmap" source="C:\Users\huanri\Documents\APA_automation\src\test_cases\apa_core_processmap">
+<suite id="s1-s1-s1" name="Verify Processmap" source="C:\Users\huanri\Documents\APA_automation\src\test_cases\apa_core_processmap\verify_processmap.robot">
+<test id="s1-s1-s1-t1" name="Login">
+<kw name="Login" library="resource">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180619 13:04:00.973" level="INFO">Opening browser 'Chrome' to base url 'http://qa.dxc-apa.net/passport/login'.</msg>
+<status status="PASS" starttime="20180619 13:04:00.972" endtime="20180619 13:04:27.396"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180619 13:04:27.397" endtime="20180619 13:04:28.830"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20180619 13:04:28.831" endtime="20180619 13:04:28.833"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Agile Process Automation</arg>
+</arguments>
+<msg timestamp="20180619 13:04:28.935" level="INFO">Page title is 'Agile Process Automation'.</msg>
+<status status="PASS" starttime="20180619 13:04:28.836" endtime="20180619 13:04:28.935"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:28.834" endtime="20180619 13:04:28.936"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:00.971" endtime="20180619 13:04:28.936"></status>
+</kw>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${VALID USER}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginEmail</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180619 13:04:28.941" level="INFO">Typing text 'admin1@dxc.com' into text field 'id:loginEmail'.</msg>
+<status status="PASS" starttime="20180619 13:04:28.940" endtime="20180619 13:04:30.004"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:28.937" endtime="20180619 13:04:30.005"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${VALID PASSWORD}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180619 13:04:30.007" level="INFO">Typing text 'password' into text field 'id:loginPassword'.</msg>
+<status status="PASS" starttime="20180619 13:04:30.006" endtime="20180619 13:04:30.386"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:30.005" endtime="20180619 13:04:30.386"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginButton</arg>
+</arguments>
+<msg timestamp="20180619 13:04:30.388" level="INFO">Clicking button 'id:loginButton'.</msg>
+<status status="PASS" starttime="20180619 13:04:30.388" endtime="20180619 13:04:30.926"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20180619 13:04:30.927" endtime="20180619 13:04:30.941"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:30.387" endtime="20180619 13:04:30.942"></status>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>tag:small</arg>
+<arg>Good day,</arg>
+</arguments>
+<msg timestamp="20180619 13:04:30.944" level="INFO">Verifying element 'tag:small' contains exact text 'Good day,'.</msg>
+<status status="PASS" starttime="20180619 13:04:30.943" endtime="20180619 13:04:31.909"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:30.942" endtime="20180619 13:04:31.910"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:00.967" endtime="20180619 13:04:31.910"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:(//p[@class="arrow arrow"])[2]</arg>
+</arguments>
+<msg timestamp="20180619 13:04:31.911" level="INFO">Clicking element 'xpath:(//p[@class="arrow arrow"])[2]'.</msg>
+<status status="PASS" starttime="20180619 13:04:31.910" endtime="20180619 13:04:32.248"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>xpath://div[@class="customer-box"]</arg>
+</arguments>
+<assign>
+<var>${length_customer}</var>
+</assign>
+<msg timestamp="20180619 13:04:32.250" level="INFO">Length is 34</msg>
+<msg timestamp="20180619 13:04:32.251" level="INFO">${length_customer} = 34</msg>
+<status status="PASS" starttime="20180619 13:04:32.249" endtime="20180619 13:04:32.251"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${length_customer}&gt;0</arg>
+</arguments>
+<status status="PASS" starttime="20180619 13:04:32.251" endtime="20180619 13:04:32.252"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@title="${customer}"]/following-sibling::div/div/div/div[1]</arg>
+</arguments>
+<status status="PASS" starttime="20180619 13:04:32.253" endtime="20180619 13:04:34.035"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@title="${customer}"]/following-sibling::div/div/div/div[1]</arg>
+</arguments>
+<msg timestamp="20180619 13:04:34.036" level="INFO">Clicking element 'xpath://div[@title="Customer1"]/following-sibling::div/div/div/div[1]'.</msg>
+<status status="PASS" starttime="20180619 13:04:34.035" endtime="20180619 13:04:34.694"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" starttime="20180619 13:04:34.694" endtime="20180619 13:04:34.697"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@class="dropdown-menu down"]//following-sibling::div[1]/li[@title="${process}"]</arg>
+</arguments>
+<msg timestamp="20180619 13:04:34.698" level="INFO">Clicking element 'xpath://div[@class="dropdown-menu down"]//following-sibling::div[1]/li[@title="hrtest_060601"]'.</msg>
+<status status="PASS" starttime="20180619 13:04:34.698" endtime="20180619 13:04:34.893"></status>
+</kw>
+<kw name="Get Selenium Implicit Wait" library="Selenium2Library">
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20180619 13:04:34.893" endtime="20180619 13:04:34.894"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@title="${customer}"]/ancestor::div/following-sibling::div/div/div/p[@class='jump-to-pe pe-able-click']</arg>
+</arguments>
+<msg timestamp="20180619 13:04:34.896" level="INFO">Clicking element 'xpath://div[@title="Customer1"]/ancestor::div/following-sibling::div/div/div/p[@class='jump-to-pe pe-able-click']'.</msg>
+<status status="PASS" starttime="20180619 13:04:34.894" endtime="20180619 13:04:35.101"></status>
+</kw>
+<kw name="Get Selenium Implicit Wait" library="Selenium2Library">
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20180619 13:04:35.101" endtime="20180619 13:04:35.101"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>xpath://div[@class="pn-node pn-trans"]</arg>
+</arguments>
+<assign>
+<var>${length_processmap}</var>
+</assign>
+<msg timestamp="20180619 13:04:35.102" level="INFO">Length is 38</msg>
+<msg timestamp="20180619 13:04:35.103" level="INFO">${length_processmap} = 38</msg>
+<status status="PASS" starttime="20180619 13:04:35.102" endtime="20180619 13:04:35.103"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${length_processmap}&gt;0</arg>
+</arguments>
+<status status="PASS" starttime="20180619 13:04:35.103" endtime="20180619 13:04:35.104"></status>
+</kw>
+<kw name="Get Selenium Implicit Wait" library="Selenium2Library">
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20180619 13:04:35.105" endtime="20180619 13:04:35.106"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20180619 13:04:35.107" endtime="20180619 13:04:38.763"></status>
+</kw>
+<status status="PASS" starttime="20180619 13:04:00.965" endtime="20180619 13:04:38.763" critical="yes"></status>
+</test>
+<doc>apa_automation_testing_for_regression
+</doc>
+<status status="PASS" starttime="20180619 13:03:59.660" endtime="20180619 13:04:38.767"></status>
+</suite>
+<status status="PASS" starttime="20180619 13:03:59.651" endtime="20180619 13:04:38.775"></status>
+</suite>
+<status status="PASS" starttime="20180619 13:03:59.496" endtime="20180619 13:04:38.779"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Test Cases">Test Cases</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Apa Core Processmap">Test Cases.Apa Core Processmap</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="Verify Processmap">Test Cases.Apa Core Processmap.Verify Processmap</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
